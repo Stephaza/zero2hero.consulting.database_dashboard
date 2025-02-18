@@ -1,0 +1,39 @@
+{%extends 'main_base.html'%}
+{%block title%}Home{%endblock%}
+{%block content%}
+
+<div class="container text-center">
+    <h1>Database Dashboard</h1>
+    <p class="lead">Get acces to our database and search-engine, and log-in to manage and add new observations.</p>
+    <hr>
+    <div class="container col-md-6">
+        <div class="container mb-3">
+            <h4>Sections</h4>
+            <ul class="list-group">
+                <a href="#" class="list-group-item list-group-item-action">About Us</a>
+            </ul>
+        </div>
+        <div class="container mb-3">
+            <h4>Free Access Actions</h4>
+            <ul class="list-group">
+                <a href="#" class="list-group-item list-group-item-action">Visualize Raw Database</a>
+                <a href="#" class="list-group-item list-group-item-action">Search Engine</a>
+                <a href="#" class="list-group-item list-group-item-action">Download Data</a>
+                <a href="#" class="list-group-item list-group-item-action">Generate Report</a>
+            </ul>
+        </div>
+        <div class="container mb-3">
+            <h4>User Only Actions</h4>
+            <ul class="list-group">
+                <a href="{{url_for('user.login')}}" class="list-group-item list-group-item-action">Log In</a>
+                <a href="{{url_for('user.logout')}}" class="list-group-item list-group-item-action">Log Out</a>
+                <a href="{{url_for('user.manage_observations')}}" class="list-group-item list-group-item-action">Manage Observations</a>
+                <a href="#" class="list-group-item list-group-item-action">Add New Observations</a>
+                <a href="#" class="list-group-item list-group-item-action">Upload Observations with Document</a>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+{%endblock%}

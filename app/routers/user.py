@@ -18,3 +18,16 @@ def login():
         else:
             return 'Invalid username or password'
     return render_template('login.html')
+
+#Log Out route
+@user.route('/logout')
+def logout():
+    session.pop('user',None)
+    return redirect(url_for('main.index'))
+
+#Manage Observations route
+@user.route('/manage_observations')
+def manage_observations():
+    if 'user' in session:
+        return 'Manage Observations'
+    return redirect(url_for('user.login'))
