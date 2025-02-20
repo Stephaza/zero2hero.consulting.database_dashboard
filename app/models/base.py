@@ -4,95 +4,67 @@ import datetime
 # Base Table
 class Base(db.Model):
 
-    #id
     id = db.Column(db.Integer, primary_key=True)
-    #collection_id
-    collection_id = db.Column(db.String(255),unique=True)
-    #Objecttyp Name
-    objecttype_name = db.Column(db.String(255))
-    #Collection
-    collection = db.Column(db.String(255))
-    #Institution
-    institution = db.Column(db.String(255))
-    #Type:Status
-    type_status = db.Column(db.String(255))
-    #Total
-    total = db.Column(db.String(255))
-    #Name
-    name = db.Column(db.String(255))
-    #Gathering
-    gathering = db.Column(db.String(255))
-    #Name of Collector
-    name_of_collector = db.Column(db.String(255))
-    #Date of Collection
-    date_of_collection = db.Column(db.String(255))
-    #Remarks
-    remarks = db.Column(db.String(255))
-
-    #Taxonomic Variables
-
-    #Subphylum
-    subphylum = db.Column(db.String(255))
-    #Class
-    class_ = db.Column(db.String(255))
-    #Order
-    order = db.Column(db.String(255))
-    #Family
-    family = db.Column(db.String(255))
-    #Genus
-    genus = db.Column(db.String(255))
-    #Subgenus
-    subgenus = db.Column(db.String(255))
-    #Species
-    species = db.Column(db.String(255))
-    #Subspecies
-    subspecies = db.Column(db.String(255))
-
-    #Publication Variables
-
-    #Author
-    author = db.Column(db.String(255))
-    #Publication date
-    publication_date = db.Column(db.String(255))
-    #Reference
-    reference = db.Column(db.String(255))
-    #Link
-    link = db.Column(db.String(255))
-    #Status Name
-    status_name = db.Column(db.String(255))
-    #LSID
-    lsid = db.Column(db.String(255))
-    #Type:Kind
-    type_kind = db.Column(db.String(255))
-
-    #Collection Variables
-    
-    #Number of Individuals
-    number_of_individuals = db.Column(db.Float(255))
-    #Individual Status (...38)
-    individual_status = db.Column(db.String(255))
-    #Sex
-    number_of_females = db.Column(db.Float(255))
-    number_of_males = db.Column(db.Float(255))
-    #Developmental Stage
-    developmental_stage = db.Column(db.String(255))
-    #Associated Object
-    associated_object = db.Column(db.String(255))
-    #Biographical Region
-    biographical_region = db.Column(db.String(255))
-    #Country
-    country = db.Column(db.String(255))
-    #Region
-    region = db.Column(db.String(255))
-    #Name Town
-    name_town = db.Column(db.String(255))
-    #Town_ID
-    town_id = db.Column(db.String(255))
-    #Latitude
-    latitude = db.Column(db.String(255))
-    #Longitude
-    longitude = db.Column(db.String(255))
-    #Elevation
-    elevation = db.Column(db.String(255))
-    #Habitat
-    habitat = db.Column(db.String(255))
+    collection_id = db.Column(db.String(255),unique=True) 
+    objecttyp_name = Column(String(255))
+    collection = Column(String(255))
+    institution = Column(String(255))
+    type_status = Column(String(255))
+    total = Column(String(255))
+    name = Column(String(255))
+    gathering = Column(String(255))
+    name_of_collector = Column(String(255))
+    date_of_collection = Column(String(255))
+    remarks = Column(String(255))
+    subphylum = Column(String(255))
+    class_name = Column(String(255))
+    order = Column(String(255))
+    family = Column(String(255))
+    genus = Column(String(255))
+    subgenus = Column(String(255))
+    species = Column(String(255))
+    author_date = Column(String(255))
+    reference = Column(String(255))
+    link = Column(String(255))
+    synonyms = Column(String(255))
+    species_remarks = Column(String(255))
+    lsid = Column(String(255))
+    type_kind = Column(String(255))
+    number_of_individuals = Column(Integer)
+    collection_remarks = Column(String(255))
+    sex = Column(String(255))
+    individual_remarks = Column(String(255))
+    developmental_stage = Column(String(255))
+    associated_object = Column(String(255))
+    associated_object_remarks = Column(String(255))
+    name_biogeographical_region_greater_region = Column(String(255))
+    name_biogeographical_region_greater_region_according_to_wgsrpd = Column(String(255))
+    country = Column(String(255))
+    region = Column(String(255))
+    name_town = Column(String(255))
+    town_id = Column(String(255))
+    latitude = Column(String(255))
+    longitude = Column(String(255))
+    elevation_height_depth_asl = Column(String(255))
+    habitat = Column(String(255))
+    name_of_collector_complete = Column(String(255))
+    id_of_collector = Column(String(255))
+    date = Column(String(255))
+    field_id = Column(String(255))
+    project_expedition = Column(String(255))
+    expedition_remarks = Column(String(255))
+    preparation = Column(String(255))
+    preparator = Column(String(255))
+    condition = Column(String(255))
+    condition_date = Column(String(255))
+    availability = Column(String(255))
+    availability_date = Column(String(255))
+    acquisition_type = Column(String(255))
+    acquisition_date = Column(String(255))
+    provinience_old_collection_number = Column(String(255))
+    provinience_former_holder = Column(String(255))
+    storage_value = Column(String(255))
+    source_of_the_information = Column(String(255))
+    source_of_information_details = Column(String(255))
+    preparator_name = Column(String(255))
+    transcription_person = Column(String(255))
